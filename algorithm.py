@@ -95,3 +95,4 @@ def prime_list(number):
             number = number / i
         i+=1
     return number_array
+
