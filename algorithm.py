@@ -26,28 +26,26 @@ def greatnum(number):
         
 #3- Kullanıcıdan girilen sayının EBOB ve EKOK'unu bulan programı yazınız.
 
-def lcm(number, number2):
-    number_array = []
+def lcm(number, number2): #EKOK
+    number_array = [1,2,3,4,5,6,7]
     x = 1
     i = 2
     while number > 1 or number2 > 1:
         while isprime(i) and (number % i == 0 or number2 % i == 0):
             if number % i == 0 and number2 % i == 0:
-                number_array.append(i)
                 number = number // i
                 number2 = number2 // i
             elif number % i == 0:
-                number_array.append(i)
                 number = number // i
             elif number2 % i == 0:
-                number_array.append(i)
                 number2 = number2 // i
+            number_array.append(i)
         i += 1
     for i in number_array:
         x *= i
     return x
 
-def gcd(number, number2):
+def gcd(number, number2): #EBOB
     number_array = []
     x = 1
     i = 2
